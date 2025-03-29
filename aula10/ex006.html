@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        #area {
+            background-color: rgb(250, 250, 111);
+            width: 200px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        interaja
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+
+        /* AO INVÉS DE DECLARARMOS OS EVENTOS NA DIV DO HTML, PODEMOS DECLARAR AQUI DENTRO DO SCRIPT; SÃO CHAMADOS DE LISTENERS, basta declarar abaixo da variável que foi declarada no topo:
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+        */
+
+        function clicar() {
+            a.innerText ='clicou'
+            a.style.backgroundColor = 'blue'
+        }
+
+        function entrou() {
+            a.innerText = 'entrou'
+            a.style.color = 'red'
+        }
+
+        function saiu() {
+            a.innerHTML = 'saiu'
+            a.style.color = 'green'
+        }
+    </script>
+</body>
+</html>
