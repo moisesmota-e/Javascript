@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: azure;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Aprendendo utilizar o DOM</h1>
+    <h2 id="idi">primeiro exemplo</h2>
+    <p class="cls">segundo exemplo</p>
+    <p class="cls">terceiro exemplo</p>
+    <p id="query">quarto exemplo</p>
+    <p name="nome">quinto exemplo</p>
+    <br>
+    <script>
+        var t = document.getElementsByTagName('h1')[0];
+        document.write(t.innerText);
+        t.style.color = 'blue';
+        
+        var i = document.getElementById('idi');
+        i.style.color = 'red';
+
+        var c = document.getElementsByClassName('cls')[0];
+        c.style.color = 'yellow';
+
+        var c = document.getElementsByClassName('cls')[1];
+        c.style.color = 'green';
+        
+        var q = document.querySelector('p#query');
+        q.style.background = 'purple';
+        q.style.color = 'white';
+
+        var n = document.getElementsByName('nome')[0];
+        n.style.background = 'lightblue';
+
+    </script>
+</body>
+</html>
